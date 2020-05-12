@@ -2,9 +2,31 @@
 #include <iostream>
 #include <fstream>
 
+
+
+
+
 Request::Request()
 {
     
+}
+
+string Request::getText()
+{
+    return text;
+}
+
+void Request::setText(string words)
+{
+    text = words;
+}
+
+bool Request::emptyText()
+{
+    if (getText() == "") {
+        return true;
+    }
+    return false;
 }
 
 int Request::request(string host,string fichier)
@@ -12,28 +34,33 @@ int Request::request(string host,string fichier)
 
     CURL* curl;
     string text = readFile(fichier);
-    std::string postParam("text=");
-    postParam += text;
-	curl = curl_easy_init();
-	if (curl) {
+    if (text != "") {
+        std::string postParam("text=");
+        postParam += text;
+        cout << postParam;
+        curl = curl_easy_init();
+        if (curl) {
 
-        /* SPECIFY REQUEST */
-        curl_easy_setopt(curl, CURLOPT_URL, host.c_str());
-        curl_easy_setopt(curl, CURLOPT_POST, 1);
-        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postParam.c_str());
-        
+            /* SPECIFY REQUEST */
+            curl_easy_setopt(curl, CURLOPT_URL, host.c_str());
+            curl_easy_setopt(curl, CURLOPT_POST, 1);
+            curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postParam.c_str());
 
-        /* Perform the request, res will get the return code */
-        auto res = curl_easy_perform(curl);
-        /* Check for errors */
-        if (res != CURLE_OK)
-            fprintf(stderr, "curl_easy_perform() failed: %s\n",
-                curl_easy_strerror(res));
 
-        /* always cleanup */
-        curl_easy_cleanup(curl);
+            /* Perform the request, res will get the return code */
+            auto res = curl_easy_perform(curl);
+            /* Check for errors */
+            if (res != CURLE_OK)
+                fprintf(stderr, "curl_easy_perform() failed: %s\n",
+                    curl_easy_strerror(res));
+
+            /* always cleanup */
+            curl_easy_cleanup(curl);
+        }
+        curl_global_cleanup();
+
     }
-    curl_global_cleanup();
+
 
 	return 0;
 }
@@ -70,16 +97,22 @@ int Request::upload(string host,string fichier)
 
 string Request::readFile(string fichier)
 {
-    string text = "";
+    text = "";
     ifstream file; 
-    string words = "";
+    string words ;
     file.open(fichier);
     if (!file) {
         cerr << "Unable to open " + fichier;
     }
+    /*
     while (file >> words) {
         text += words;
+    }*/
+    while (getline(file, words)) {
+        text += words;
+        
     }
     //cout <<text ;
     return text;
 }
+

