@@ -1,4 +1,4 @@
-# Keylogger
+# JohnDoeSpy
 
 ## Keylogger build in C++ for detect keys from keyboards (specific keys only available for french keyboard) and receive data from :
 * Hidden file text
