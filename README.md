@@ -1,7 +1,7 @@
 # JohnDoeSpy
 
 # Introduction
-<p> This is a simple keylogger for educational purposes. I'm . </p>
+<p> This is a simple keylogger for educational purposes. I'm not responsible of your usage. </p>
 <p> Keylogger build in C++ for detect keys from keyboards (specific keys only available for french keyboard). You can receive data from url intermediate hosting or by simple text file hidden in your directory. </p>
 
 
