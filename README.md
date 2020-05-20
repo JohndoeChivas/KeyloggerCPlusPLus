@@ -1,10 +1,15 @@
 # JohnDoeSpy
 
-## Keylogger build in C++ for detect keys from keyboards (specific keys only available for french keyboard) and receive data from :
-* Hidden file text
-* from intermediate hosting
+# Introduction
+<p> This is a simple keylogger for educational purposes. I'm . </p>
+<p> Keylogger build in C++ for detect keys from keyboards (specific keys only available for french keyboard). You can receive data from url intermediate hosting or by simple text file hidden in your directory. </p>
 
-# WORK ONLY FOR WINDOWS
+
+# HAVE TO KNOW 
+
+<p> This keylogger is build for french keyboard, by the way specific characters will appear with bad matching if you use an other country's keyboard. But any others characters show on <p/>
+
+<p> WORK ONLY FOR WINDOWS </p>
 
 
 ## How to start
@@ -23,5 +28,7 @@
 * log.txt is the file where input text victim will be save.
 
 
+
+### UPDATE COMMING SOON
 
 
