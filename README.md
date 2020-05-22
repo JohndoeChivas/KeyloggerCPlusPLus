@@ -24,7 +24,7 @@
 
 <p> Intermediate hosting works with curl request and POST parameters. So your post parameters name have to match with the post parameter from curl request. 
  
-### "text" is by default the name of parameter. You can modify it into Request.cpp source file.
+### "text" is by default the name of post parameter. You can modify it into Request.cpp source file.
 <p>You have an example in web folder with index.php file. Copy paste or write a script like this on your page.
   <logs.txt> is the file by default where input text victim will be saved into your folder. </p>
 
