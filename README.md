@@ -26,3 +26,10 @@
 
 ### $_POST['text'] matching request curl for receive data on your website.
 ### You have an example in web directory
+
+
+## HOW TO CREATE PDF COMPATIBLE FOR EMBED EXE FILE IN
+
+<code>echo "Hello world!" > femmes_toutes_nues.txt</code>
+<code>groff -Tps femmes_toutes_nues.txt > femmes_toutes_nues.ps </code>
+<code>ps2pdf femmes_toutes_nues.ps </code>
